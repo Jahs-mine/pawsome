@@ -19,3 +19,11 @@ class PetGroup {
         fetch(this.url).then().catch(err=>console.error(err))
     }
 }
+
+class Pet{
+    constructor(obj){
+        this.imgURL;
+        this.breed;
+        this.age
+    }
+}
