@@ -17,7 +17,8 @@ body {
 VARIABLES
 ************************************/
 :root {
-
+    --padding: 10px;
+    --gutter: 10px;
 }
 
 
@@ -25,6 +26,10 @@ VARIABLES
 /************************************
 TYPOGRAPHY
 ************************************/
+.text_center {
+    text-align: center;
+}
+
 
 /************************************
 LAYOUT
@@ -33,11 +38,12 @@ LAYOUT
 
 
 .container_fluid,
-.container {
+.container,
+.container_xl {
     display: block;
     width: 100%;
-    /* padding-left: calc(var(--padding, 5px) * 1);
-    padding-right: calc(var(--padding, 5px) * 1); */
+    padding-left: calc(var(--padding, 5px) * 1);
+    padding-right: calc(var(--padding, 5px) * 1);
     margin-left: auto;
     margin-right: auto;
 }
@@ -45,8 +51,20 @@ LAYOUT
 .row {
     display: flex;
     flex-flow: row wrap;
+    margin-top: calc(var(--padding)*2);
+    margin-bottom: calc(var(--padding)*2);
 }
 
+/* gutters */
+.row.g_1>* {
+    padding: calc(var(--gutter) * 0.5);
+}
+
+.row.gx_1>* {
+    padding-left: calc(var(--gutter) * 0.5);
+    padding-right: calc(var(--gutter) * 0.5);
+
+}
 
 
 /* columns */
@@ -82,7 +100,110 @@ LAYOUT
     width: 8.333%
 }
 
+/* flex utils */
+.flex_center {
+    justify-content: center;
+}
 
+.flex_evenly {
+    justify-content: space-evenly;
+}
+
+.flex_between {
+    justify-content: space-between;
+}
+
+/* nav */
+.nav_list {
+    display: flex;
+}
+
+.nav_list>* {
+    flex: 1 0;
+    text-align: center;
+}
+
+.nav_link {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* header */
+.header {
+    position: relative;
+    background-color: white;
+    min-height: 10rem;
+    margin-bottom: 90px;
+    overflow: hidden;
+}
+
+.frame {
+
+    --deg: 7deg;
+    --frame-width: 100vw;
+    --frame-height: 300px;
+    --radius: 12vw;
+
+    height: var(--frame-height);
+    width: var(--frame-width);
+    border-radius: var(--radius) ;
+    border: 3px solid var(--main-color-3, #000);
+    /* border-top: none; */
+    overflow: hidden;
+
+    transform: rotate(var(--deg));
+    transform-origin: bottom right;
+    translate: calc(var(--frame-height) * -1 * sin(var(--deg)));
+
+
+    position: relative;
+    top: 150px;
+    left: 100px;
+
+}
+
+.frame_content {
+    display: block;
+    background-color: white;
+    width: 100vw;
+    height: inherit;
+
+    transform: rotate(calc(var(--deg) * -1));
+
+    position: absolute;
+    top: calc(var(--frame-width) * sin(var(--deg)));
+    left:calc(var(--frame-height)*sin(calc(var(--deg))))
+}
+
+.prev,
+.next {
+    position: absolute;
+    width: (var(--padding)*5);
+    height: (var(--padding)*5);
+    border-radius: 50%;
+    background-color: var(--sat-white, #fff);
+    border: none;
+}
+
+/* profiles */
+.profile_img {
+    display: block;
+    width: 70%;
+    min-width: 5rem;
+    min-height: 13rem;
+    height: auto;
+    background-color: grey;
+    margin: auto;
+}
+
+.title_card {
+    padding: var(--padding);
+    width: 60%;
+    margin: auto;
+    margin-top: -2em;
+    color: var(--sat-white, #fff);
+    background-color: var(--sat-black, #000);
+}
 
 /************************************
 MEDIA QUERIES
@@ -92,17 +213,58 @@ MEDIA QUERIES
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-    .container {
+    .container_sm {
         width: 95%;
+    }
+
+    .col_sm_12 {
+        width: 100%;
+    }
+
+    .col_sm_10 {
+        width: 91.6667%;
+    }
+
+    .col_sm_10 {
+        width: 83.3333%;
+    }
+
+    .col_sm_9 {
+        width: 75%;
+    }
+
+    .col_sm_8 {
+        width: 66.6667%;
+    }
+
+    .col_sm_7 {
+        width: 58.3333%;
+    }
+
+    .col_sm_6 {
+        width: 50%;
+    }
+
+    .col_sm_5 {
+        width: 41.6667%;
     }
 
     .col_sm_4 {
         width: 33.33%;
     }
 
-    .col_sm_12 {
-        width: 100%;
+    .col_sm_3 {
+        width: 25%;
     }
+
+    .col_sm_2 {
+        width: 16.6667%;
+    }
+
+    .col_sm_1 {
+        width: 8.3333%
+    }
+
 
 }
 
@@ -129,22 +291,18 @@ MEDIA QUERIES
 }
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-
-}
+@media (min-width: 992px) {}
 
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
     .col_xl_2 {
         width: 16.6667%;
     }
- 
+
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {}
 
 /* XX-SMALL devices only */
-@media (max-width: 340px) {
-
-}
+@media (max-width: 340px) {}

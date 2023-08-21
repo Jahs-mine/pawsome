@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="css/anim.css" />
   </head>
   <body>
-    <nav class="">
+    <nav class="container_xl dnav">
+      <span class="logo">Pawsowe</span>
       <ul class="nav_list">
         <li class=""><a href="" class="nav_link">Home</a></li>
         <li class=""><a href="" class="nav_link">Adoption</a></li>
@@ -20,18 +21,20 @@
       </ul>
     </nav>
 
-    <header class="">
-      <!-- make a carousel -->
-      <div class="">
-
-        <p class="">Make Magical Moments</p>
-        <p class="">with your match of a furry companion</p>
-
+    <header class="container-fluid header" id="header">
+      <div class="frame">
+        <div class="frame_content">
+          <div class="">
+            <p class="">Make Magical Moments</p>
+            <p class="">with your match of a furry companion</p>
+          </div>
+        </div>
       </div>
 
-      <button class="btn round_btn">back</button>
-      <button class="btn round_btn">Next</button>
+      <!-- make a carousel -->
 
+      <button class="btn round_btn prev">back</button>
+      <button class="btn round_btn next">Next</button>
 
       <!-- main buttons -->
       <div class="row">
@@ -40,38 +43,47 @@
       </div>
     </header>
 
-    <section class="">
+    <section class="container">
       <h2 class="">About Us</h2>
+      <p>Every pet needs a home and that where we come in</p>
     </section>
 
-    <section class="">
-      <h2>Meet Our Team</h2>
+    <section class="container">
+      <div class="row text_center g_1 flex_evenly">
+        <h2 class="h_2 text_center col_12">Meet Our Team</h2>
+        <section class="profile col_12 col_sm_6 col_lg_4">
+          <img src="" alt="" class="profile_img" />
+          <div class="title_card">
+            <h3 class="">John Doe</h3>
+            <span class="d_4 title">Founder </span>
+          </div>
 
-      <div class="row">
-        <section class="profile col_12 col_md_4">
-          <img src="" alt="" />
-          <h3 class="">John Doe</h3>
-          <span class="d_4 title">Founder </span>
           <p class="bio">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sint,
             veritatis labore eum molestiae placeat ducimus culpa fuga possimus
             corrupti reprehenderit in saepe amet non.
           </p>
         </section>
-        <section class="profile col_12 col_md_4">
-          <img src="" alt="" />
-          <h3 class="">Jane Dove</h3>
-          <span class="d_4 title">Vetenarian</span>
+        <section class="profile col_12 col_sm_6 col_lg_3">
+          <img src="" alt="" class="profile_img" />
+          <div class="title_card">
+            <h3 class="">Jane Dove</h3>
+            <span class="d_4 title">Vetenarian</span>
+          </div>
+
           <p class="bio">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sint,
             veritatis labore eum molestiae placeat ducimus culpa fuga possimus
             corrupti reprehenderit in saepe amet non.
           </p>
         </section>
-        <section class="profile col_12 col_md_4">
-          <img src="" alt="" />
-          <h3 class="">James Deer</h3>
-          <span class="d_4 title">Animal Rights Activist</span>
+        <section class="profile col_12 col_sm_6 col_lg_3">
+          <img src="" alt="" class="profile_img" />
+          <div class="title_card">
+            <h3 class="">James Deer</h3>
+            <span class="d_4 title">Animal Rights Activist</span>
+          </div>
+
           <p class="bio">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sint,
             veritatis labore eum molestiae placeat ducimus culpa fuga possimus
@@ -81,7 +93,7 @@
       </div>
     </section>
 
-    <footer class="">
+    <footer class="container">
       <ul class="nav_list flex_center">
         <li>
           <a
@@ -164,7 +176,6 @@
       </div>
     </footer>
 
-    
     <script src="js/app.js" rel="type/javascript"></script>
     <script src="js/main.js" rel="type/javascript"></script>
   </body>
