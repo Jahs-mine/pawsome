@@ -12,6 +12,7 @@ RESET
 body {
     max-width: 100vw;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 /************************************
@@ -145,15 +146,16 @@ LAYOUT
 
 
 /* ABOUT */
-.about .row{
+.about .row {
     align-items: center;
 }
+
 .about .row> :nth-child(2n)>.row> :nth-child(2n) {
     order: -1;
     text-align: end;
 }
 
-.about_img{
+.about_img {
     height: auto;
     width: 100%;
     min-height: 5rem;
@@ -355,4 +357,5 @@ MEDIA QUERIES
 @media (max-width: 320px) {}
 
 /* X-SMALL FEVICES AND BELOW */
-@media (max-width: 676) {}
+@media (max-width: 575px) {
+}
