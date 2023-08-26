@@ -28,6 +28,12 @@ VARIABLES
     --padding: 10px;
     --spacing: 5px;
     --radius: 10px;
+    --sat-white: #e6ffe6;
+    --sat-black:;
+    --green_1:rgb(20, 251, 20);
+    --green_2:rgb(20, 251, 20);;
+    --green_3:rgb(20, 251, 20);;
+    --green_4:rgb(20, 251, 20);;
 }
 
 
@@ -45,6 +51,8 @@ LAYOUT
 .page_wrapper {
     box-shadow: -4px 4px 8px black;
     min-height: 100vvh;
+    background-color: var(--sat-white);
+
 }
 
 /* IMG */
@@ -178,7 +186,7 @@ LAYOUT
 .nav {
     padding-top: calc(var(--padding));
     padding-bottom: calc(var(--padding));
-    box-shadow: 0px 4px 8px black;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0,0.3);
 }
 
 .nav_list_item {
