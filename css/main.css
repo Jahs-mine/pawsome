@@ -66,11 +66,13 @@ LAYOUT
 }
 
 /* CONTAINERS */
+.page_wrapper,
 .container,
 .container_md,
 .container_lg,
 .container_x_lg,
-.container_xx_lg .container_fluid {
+.container_xx_lg,
+.container_fluid {
     width: 100%;
     display: block;
     padding-left: var(--padding, 10px);
@@ -161,6 +163,12 @@ LAYOUT
 .flex_evenly {
     justify-content: space-evenly;
 }
+.flex_between{
+justify-content: space-between;
+}
+.align_around {
+    align-content: space-around;
+}
 
 /* padding */
 .p_3 {
@@ -245,29 +253,43 @@ LAYOUT
 }
 
 /* pet page */
-#pet_page .page_wrapper{
-    max-height: 100vh;
-    height: 100vh;
+
+
+.banner {
+
+
+    border-radius: var(--radius);
+    border: 1px solid grey;
 }
 
-/* search*/
-.search_bar{
+.banner>.row {
+    min-height: 9rem;
+}
+
+.nav.pet_nav{    
+    box-shadow: none;
+}
+.search_bar {
     border: grey 1px solid;
     border-radius: var(--radius);
 }
-.search_bar > *{
+
+.search_bar>* {
     border: 0;
-    outline : none;
+    outline: none;
     background-color: inherit;
     min-height: 30px;
 }
 
-.search_input{
-    padding-left: var(--padding)
+.search_input {
+
+}
+.search_input::placeholder{
+    color: green;
 }
 
 
-/* pets section */
+
 
 /************************************
 MEDIA QUERIES
@@ -277,6 +299,9 @@ MEDIA QUERIES
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
+    :root {
+        font-size: 1em;
+    }
 
     .col_sm_12 {
         width: 100%;
@@ -335,6 +360,16 @@ MEDIA QUERIES
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 
+    :root {
+        font-size: 1.5em;
+    }
+
+    /* PAGE WRAPPER */
+    .page_wrapper {
+        width: 70%;
+    }
+
+    /* CONTAINER */
     .container,
     .container_md {
         width: 720px;
@@ -392,10 +427,21 @@ MEDIA QUERIES
     .about_img {
         min-height: 7rem;
     }
+
+    /* banner */
+    .banner>.row {
+        min-height: 9rem;
+    }
+
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+
+    :root {
+        font-size: 2em;
+    }
+
 
     .container,
     .container_md,
@@ -455,10 +501,20 @@ MEDIA QUERIES
     .about_img {
         min-height: 8rem;
     }
+
+    /* banner */
+    .banner>.row {
+        min-height: 12rem;
+    }
+
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+
+    :root {
+        font-size: 2.5em;
+    }
 
     .container,
     .container_md,
@@ -476,6 +532,10 @@ MEDIA QUERIES
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
 
+    :root {
+        font-size: 3em;
+    }
+
     .container,
     .container_md,
     .container_lg,
@@ -491,13 +551,7 @@ MEDIA QUERIES
 }
 
 /* XX-SMALL devices only */
-@media (max-width: 320px) {
-
-}
+@media (max-width: 320px) {}
 
 /* X-SMALL FEVICES AND BELOW */
-@media (max-width: 575px) {
-    .pet_nav{
-        order: 99;
-    }
-}
+@media (max-width: 575px) {}
