@@ -29,15 +29,20 @@ VARIABLES
     --padding: 10px;
     --spacing: 5px;
     --radius: 10px;
+
+
+    /* color */
+    --near-white: #fff;
+    --near-black: #000;
     --sat-white: #e6ffe6;
     --sat-black: #151915;
     --green_1: rgb(20, 251, 20);
     --green_2: rgb(20, 251, 20);
-    ;
+
     --green_3: rgb(20, 251, 20);
-    ;
+
     --green_4: rgb(20, 251, 20);
-    ;
+
 }
 
 
@@ -94,7 +99,9 @@ LAYOUT
     margin-top: var(--padding, 10px);
     margin-bottom: var(--padding, 10px);
 }
-
+.row > *{
+    min-width: fit-content;
+}
 .col_12 {
     width: 100%;
 }
@@ -163,9 +170,11 @@ LAYOUT
 .flex_evenly {
     justify-content: space-evenly;
 }
-.flex_between{
-justify-content: space-between;
+
+.flex_between {
+    justify-content: space-between;
 }
+
 .align_around {
     align-content: space-around;
 }
@@ -181,6 +190,21 @@ justify-content: space-between;
 
 .p_1 {
     padding: calc(var(--padding) *1);
+}
+
+.p_y_3 {
+    padding-bottom: calc(var(--padding) *3);
+    padding-top: calc(var(--padding) *3);
+}
+
+.p_y_2 {
+    padding-top: calc(var(--padding) *2);
+    padding-bottom: calc(var(--padding) *2);
+}
+
+.p_y_1 {
+    padding-bottom: calc(var(--padding) *1);
+    padding-top: calc(var(--padding) *1);
 }
 
 /* NAVIGATION */
@@ -212,7 +236,8 @@ justify-content: space-between;
 
 
 /* ABOUT */
-.about .row {
+.about .row,
+.pet_card>.row {
     align-items: center;
 }
 
@@ -266,9 +291,10 @@ justify-content: space-between;
     min-height: 9rem;
 }
 
-.nav.pet_nav{    
+.nav.pet_nav {
     box-shadow: none;
 }
+
 .search_bar {
     border: grey 1px solid;
     border-radius: var(--radius);
@@ -281,15 +307,34 @@ justify-content: space-between;
     min-height: 30px;
 }
 
-.search_input {
 
-}
-.search_input::placeholder{
+.search_input {}
+
+.search_input::placeholder {
     color: green;
 }
 
+.pet_card_texts,
+.pet_card_img {
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+}
 
+.pet_card_img {
+    width: 100%;
+    min-height: 8rem;
+    height: auto;
+    border-radius: var(--radius);
+    
+    position:relative;
+    z-index: 9;
+}
 
+.pet_card_texts {
+    min-height:6.5rem;
+    border-top-right-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+    background-color: var(--near-white, #fff);
+}
 
 /************************************
 MEDIA QUERIES

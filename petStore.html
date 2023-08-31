@@ -36,20 +36,51 @@
       </nav>
       <main class="container_fluid">
         <div class="row flex_evenly">
+          <h2>Search For A Pet</h2>
           <div class="col_12 col_lg_6">
-            <h2>Search For A Pet</h2>
             <form action="">
               <div class="search_bar row g_3">
-                <button class="col_3 search_btn" title="search button">search</button>
-                <input type="search" name="" id="" class="col_9 search_input" placeholder="search" />
+                <button class="col_3 search_btn" title="search button">
+                  search
+                </button>
+                <input
+                  type="search"
+                  name=""
+                  id=""
+                  class="col_9 search_input"
+                  placeholder="search"
+                />
               </div>
             </form>
           </div>
         </div>
 
-        <section class="pets_result">
-          <div class="row flex_between"><h2 class="col_6">Recommend</h2> <a href="" class="col_4">See All</a></div>
+        <section class="pets_section">
+          <div class="row flex_between">
+            <h2 class="col_6">Recommend</h2>
+            <a href="" class="col_4">See All</a>
+          </div>
 
+          <div class="row pets_result flex_evenly">
+            <div class="col_12 col_md_10">
+              <div class="pet_card">
+                <div class="row">
+                  <div class="col_5">
+                    <a href="">
+                      <img src="" alt="" class="img pet_card_img" />
+                    </a>
+                  </div>
+                  <div class="col_7">
+                    <div class="pet_card_texts p_y_2 row g_2">
+                      <h4 class="pet_breed col_9">Breed</h4>
+                      <span class="pet_gender col_3">gender</span>
+                      <span class="pet_age">Age</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
       </main>
     </div>
