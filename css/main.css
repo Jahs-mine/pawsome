@@ -99,9 +99,7 @@ LAYOUT
     margin-top: var(--padding, 10px);
     margin-bottom: var(--padding, 10px);
 }
-.row > *{
-    min-width: fit-content;
-}
+
 .col_12 {
     width: 100%;
 }
@@ -281,8 +279,6 @@ LAYOUT
 
 
 .banner {
-
-
     border-radius: var(--radius);
     border: 1px solid grey;
 }
@@ -312,6 +308,10 @@ LAYOUT
 
 .search_input::placeholder {
     color: green;
+}
+
+.row.pet_card_texts >  *{
+    min-width: fit-content;
 }
 
 .pet_card_texts,

@@ -9,7 +9,37 @@
   </head>
   <body id="pet_page">
     <div class="page_wrapper">
-      <nav class="nav nav_bar"></nav>
+      <nav class="nav nav_bar">
+        <!-- <button class="btn nav_collapse_btn" data-collapse-target="#nav_1">
+          collapse
+        </button> -->
+
+          <span class="col_11 col_md_3 text_center logo">Furriendly</span>
+        
+        <!-- nav trigger -->
+
+        <!-- links: Homepage, Donate, Pets, Log-in , Sign-up-->
+        <!-- collapsible  nav -->
+
+        <div class="col_12 col_md_9">
+          <div class="collapse_nav" id="nav_1">
+            <ul class="nav_list flex_evenly">
+              <li class="nav_list_item">
+                <a href="index.html" class="nav_link">Home</a>
+              </li>
+              <li class="nav_list_item">
+                <a href="#" class="nav_link" disabled>Donate</a>
+              </li>
+              <li class="nav_list_item">
+                <a href="#" class="nav_link" disabled>Log-in</a>
+              </li>
+              <li class="nav_list_item">
+                <a href="#" class="nav_link" disabled>Sign-up</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
       <header class="container_fluid">
         <div class="row p_2 flex_center">
           <div class="col_10 banner">
@@ -24,16 +54,7 @@
           </div>
         </div>
       </header>
-      <nav class="nav pet_nav p_2">
-        <div class="col_12">
-          <ul class="nav_list text_center">
-            <li class="nav_list_item"><a href="" class="nav_link">Dog</a></li>
-            <li class="nav_list_item"><a href="" class="nav_link">Cat</a></li>
-            <li class="nav_list_item"><a href="" class="nav_link">Bunny</a></li>
-            <li class="nav_list_item"><a href="" class="nav_link">Bird</a></li>
-          </ul>
-        </div>
-      </nav>
+      
       <main class="container_fluid">
         <div class="row flex_evenly">
           <h2>Search For A Pet</h2>
@@ -81,6 +102,7 @@
               </div>
             </div>
           </div>
+
         </section>
       </main>
     </div>
